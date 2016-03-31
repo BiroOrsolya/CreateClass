@@ -23,5 +23,26 @@ namespace CreateClass
             get { return birthDate; }
             set { birthDate = value; }
         }
+
+        public Person()
+        {
+
+        }
+
+        public Person(string Name, DateTime birthDate)
+        {
+            this.Name = Name;
+            this.birthDate = birthDate;
+        }
+
+        public enum Genders : int { Male, Female };
+
+        public Genders gender;
+
+
+        public override string ToString()
+        {
+            return (String.Format("name: {0}, birth date: {1}", this.name, this.birthDate));
+        }
     }
 }
